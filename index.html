@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Door</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <main>
+
+    <h1>The Door</h1>
+
+    <p class="lore">
+      Someone locked this door a long time ago.<br />
+      They left no key — only a question.
+    </p>
+
+    <hr />
+
+    <p class="label">The Riddle</p>
+    <blockquote>
+      "I rise to greet a winner,<br />
+      I fall to greet the rest.<br />
+      I live upon your hand —<br />
+      <em>show me, and enter."</em>
+    </blockquote>
+
+    <div id="camera-area">
+
+      <div id="placeholder">
+        <button id="btn-open">Open the eye</button>
+      </div>
+
+      <video id="webcam" autoplay playsinline muted></video>
+      <canvas id="canvas"></canvas>
+
+      <p id="status"></p>
+
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

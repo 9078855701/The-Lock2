@@ -1,0 +1,133 @@
+
+:root {
+  --ink: #1a1a1a;
+  --paper: #f7f5f0;
+  --mid: #888;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IM Fell English', Georgia, serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  animation: fadein 1.2s ease both;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+main {
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.lore {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--mid);
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--ink);
+  opacity: 0.15;
+}
+
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+blockquote {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  border-left: 2px solid var(--ink);
+  padding-left: 1.2rem;
+}
+
+blockquote em { font-style: italic; }
+
+
+#camera-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#placeholder { display: flex; }
+
+button {
+  background: none;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 0.95rem;
+  padding: 0.55rem 1.4rem;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, color 0.2s;
+}
+button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+video {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: none;
+  border: 1px solid rgba(26,26,26,0.15);
+  transform: scaleX(-1);
+}
+
+canvas { display: none; }
+
+#status {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--mid);
+  min-height: 1.4em;
+}
+
+/* ── Secret page ── */
+.secret-text {
+  font-size: 1rem;
+  color: var(--mid);
+  font-style: italic;
+}
+
+.note {
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.back {
+  font-size: 0.85rem;
+  color: var(--mid);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.back:hover { color: var(--ink); }
